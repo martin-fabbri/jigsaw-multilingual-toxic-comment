@@ -1,9 +1,7 @@
 dataset:
-  gcp_path: gs://kds-db7b567db8c05c232d12415ed9b19198bfe3439b3217b6717a03fa91
   bert_gcp_path: gs://bert_multilingual_public/bert_multi_cased_L-12_H-768_A-12_2/
-  gcp_path_remote_alias: x
   sequence_lenght: 128
-  dataset_prefix: jigsaw-toxic-comment-train-processed-seqlen
+  train_processed: data/raw/jigsaw-toxic-comment-train-processed-seqlen128.csv
 train:
   epochs: 12
   batch_size: 128
