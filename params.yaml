@@ -1,0 +1,20 @@
+dataset:
+  gcp_path: gs://kds-db7b567db8c05c232d12415ed9b19198bfe3439b3217b6717a03fa91
+  bert_gcp_path: gs://bert_multilingual_public/bert_multi_cased_L-12_H-768_A-12_2/
+  gcp_path_remote_alias: x
+  sequence_lenght: 128
+  train_data: ! '%{gcp_path}/jigsaw-toxic-comment-train-processed-seqlen%{sequence_lenght}.csv'
+train:
+  epochs: 12
+  batch_size: 128
+  lr:
+    start: 0.00001
+    max: 0.00005
+    min: 0.00001
+    rampup_epochs: 5
+    sustain_epochs: 0
+    exp_decay: 0.8
+  saved_model_path: models/x
+  train_plot_path: plots/x
+evaluate:
+  evaluate_metrics_path: metrics/evaluate_metrics.json
