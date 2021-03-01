@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+dvc = {extras = ["gs"], version = ">=2.0.0a2"}
+numpy = "*"
+matplotlib = "*"
+tensorflow = "~=2.4"
+cloud-tpu-client = "*"
+
+[dev-packages]
+ipykernel = "*"
+black = "*"
+pyyaml = "*"
+flake8 = "*"
+pydocstyle = "*"
+
+[requires]
+python_version = "3"
+
+[pipenv]
+allow_prereleases = true
